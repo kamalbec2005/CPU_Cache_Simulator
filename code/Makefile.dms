@@ -1,0 +1,14 @@
+
+CFLAGS=-Wall -Werror -c -g -fsanitize=address -lasan
+first.o: first.c first.h
+	gcc $(CFLAGS) first.c -o first.o
+
+first: first.o 
+	gcc -Wall -Werror first.o -o first -lasan
+
+.DEFAULT_GOAL := first
+
+clean: 
+	rm -f first first.o
+#all: cacheSim
+#	echo "Compilation SUCCEEDED"

@@ -16,8 +16,11 @@ Directory: /code
 Example:
 =======
 $./first 32 assoc:2 lru 4 trace2.txt
+
 no-prefetch
+
 Memory reads: 3292
+
 Memory writes: 2861
 Cache hits: 6708
 Cache misses: 3292
